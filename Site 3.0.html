@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS 3.0.css">
+    <title> Génie Séverine la best des best</title>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <a href="#home"> Accueil</a>
+    <a href="#about"> À propos</a>
+    <a href="#portfolio"> Portfolio</a>
+    <a href="#contact"> Contact</a>
+  </div>
+
+
+<section id="home">
+  <div class="contenthome">
+    <div class="home-col-1">
+      <img src="">
+    </div>
+    <div class="home-col-2">
+Séverine KHUN
+    </div>
+   <div class="home-col-3">
+    <img src="">
+   </div>
+  </div>
+</section>
+
+<section id="about" >
+  
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="moi.png" id="moi">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">À  propos</h1>
+          <p>  </p>
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('education')">Études et Formations</p>
+          <p class="tab-links" onclick="opentab('experience')">Expériences professionnelles</p>
+          <p class="tab-links" onclick="opentab('skills')">Compétences</p>
+          <p class="tab-links" onclick="opentab('interests')">Centre d'intérêts</p>
+        </div>
+        <div class="tab-contents active-tab" id="education">
+          <ul>
+              <li>
+              <span>Programme Grande École (M2) Majeure MEDIA </span><br>Institut Mines-Télécom Business School, Évry (91) | 2020 - 2024 | marketing ;
+              management de projet media
+            </li>
+            <li>
+              <span>Échange International</span><br>Luleå Tekniska Universitet, Suède - Luleå | Août - Décembre 2022| global brand
+              management ; strategies for e-business
+            </li>
+            <li>
+              <span>DUT Techniques de Commercialisation</span><br>IUT de Sceaux (92) | Université Paris Saclay | Option Commerce International et
+              mathématiques | 2018 - 2020 | marketing ; comptabilité ; management
+            </li>
+          </ul>
+        </div>
+        <div class="tab-contents"  id="experience">
+          <ul>
+            <li>
+              <span>Communication and Events Associate | BioLabs (75)</span><br> Mars 2023 - Septembre 2023 (7 mois) | Stage en entreprise
+            </li>
+            <li>
+              <span>Chargée du développement marketing | Sennelier (75)</span><br>Juin 2021 - Juillet 2021 (6 semaines) | Stage en entreprise
+            </li>
+            <li>
+              <span>Assistante marketing| Xingfengrong</span><br>Octobre 2019 - Mai 2020 (8 mois) | Projet tutoré (6 personnes)
+            </li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="skills">
+          <ul>
+            <li>
+              <span>Informatique</span><br>Pack office : niveau avancé...
+            </li>
+            <li>
+              <span>Langues</span><br>Anglais C1, 
+            </li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="interests">
+          <ul>
+            <li>
+              <span>Loisirs</span><br>Sports:
+              <p> test test</p>
+            </li>
+            <li>
+              <span>Voyages</span><br>Cambodge, Angleterre, Chine, Grèce, Indonésie, Italie, Suède, Espagne
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+
+</section>
+
+<section id="portfolio">
+  <h1>Portfolio</h1>
+</section>
+
+<section id="contact" >
+ <h1>Contact</h1>
+ <div class="contact-col-1">
+ </div>
+ <div class= "contact-col-2">
+  <span>severine.khun@imt-bs.eu</span><br>06.52.91.70.49
+ </div>
+ <div class="contact-col-3">
+
+ </div>
+</section>
+
+
+
+
+<script>
+  var tablinks= document.getElementsByClassName("tab-links");
+  var tabcontents= document.getElementsByClassName("tab-contents");
+  function opentab(tabname)
+  {
+    for(tablink of tablinks)
+    {
+      tablink.classList.remove("active-link")
+    }
+    for(tabcontent of tabcontents)
+    {
+      tabcontent.classList.remove("active-tab")
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+</script>
+</body>
