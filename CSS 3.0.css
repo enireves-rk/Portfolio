@@ -57,7 +57,7 @@
   /*------------------home------------------*/
    
    #home{
-    background-image: url(testtt.png);
+    background-image: url(Home.png);
     background-size: cover;
     background-repeat: no-repeat;
    
@@ -68,27 +68,25 @@
     height: 100vh; /* Utilise la hauteur de la fenêtre pour les sections */
     }
   
-   .home-col-1 {
-    display : flex;
-    justify-content: right;
+  
+  .home-col-1{
+    display: flex;
+    align-items: center;
+    font-size: 80px;
+    color: rgb(170, 233, 223)
   }
 
   .home-col-2{
     display: flex;
     justify-content: center;
-    font-size: 80px;
-    color: rgb(170, 233, 223)
-  }
-
-  .home-col-3{
-    display: flex;
-    justify-content: left;
-  }
+    align-items: center;
+    }
   
+
   
   /*------------------about------------------*/
     #about{
-    background-image: url(IMG_1068_02.jpg);
+    background-image: url(About.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -115,10 +113,10 @@
   
   .about-col-1 img{
     /*flex:1;*/
-    width: 200px;
+    width: 400px;
        display: flex;
-       margin-left: 50px;
-       border-radius: 15px;
+       justify-content: center;
+       align-items: center;
   }
 
   .about-col-1{
@@ -168,13 +166,10 @@
   {
     color: rgb(182, 234, 200);
     font-size: 16px;
+    font-weight: bold;
   }
 
-  .tab-contents ul li br{
-    color: pink;
-    font-size: 14px;
-  }
-  .tab-contents
+    .tab-contents
   {
     display: none;
   }
@@ -183,10 +178,13 @@
     display: block;
   }
  
+  #photoshop{
+    width: 10px;
+  }
   
   /*------------------portfolio------------------*/
   #portfolio{
-    background-image: url(IMG_1068_03.jpg);
+    background-image: url(Test-2.0_03.jpg);
    
     background-repeat: no-repeat;
   
@@ -197,10 +195,23 @@
     height: 100vh; /* Utilise la hauteur de la fenêtre pour les sections */
   
    }
-  
+
+   .slider-wrapper .image-list{
+    display:grid;
+    gap: 10px;
+    overflow-x: auto;
+    grid-template-columns: repeat (10, 1fr);
+   }
+
+   .slider-wrapper .image-list .image-item{
+    width: 220px;
+    height: 300px; 
+    object-fit: cover;
+   }
+
   /*------------------contact------------------*/
   #contact{
-    background-image: url(IMG_1068_04.jpg);
+    background-image: url(Contact\ bis.jpg);
     background-size: cover;
     background-repeat: no-repeat;
   
