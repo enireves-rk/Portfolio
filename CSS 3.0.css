@@ -1,150 +1,164 @@
+@font-face {
+  font-family: "Fontsk";
+  src: url('Myfontsk-Regular.ttf')}
+ 
  /*------------------barre de navigation------------------*/
  .navbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #333;
-    position: fixed;
-    top: 20px;
-    width: 50%;
-    height:40px; /*rajout de ça sinon la barre était trop fine*/
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    transition: top 0.3s;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .navbar a {
-    color: rgb(182, 234, 200);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    flex-grow: 1;
-  }
-  
-  .navbar a:hover {
-    /*Lorsque je survole un lien*/
-    background-color: #dddddde3;
-    color: black;
-    border-radius: 10px;
-  }
-  
-  html{
-    scroll-behavior: smooth;
-   }
-  
-   section {
-    height: 100vh; /* Set the height of each section as the viewport height */
-    
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size :cover;
-    background-blend-mode: screen;
-   
-    background-attachment: scroll;
-  }
-  
-  .contenthome {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   background-color: #333;
+   position: fixed;
+   top: 20px;
+   width: 50%;
+   height: 40px;
+   /*rajout de ça sinon la barre était trop fine*/
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+   transition: top 0.3s;
+   left: 50%;
+   transform: translateX(-50%);
+ }
+
+ .navbar a {
+   color: rgb(182, 234, 200);
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   flex-grow: 1;
+ }
+
+ .navbar a:hover {
+   /*Lorsque je survole un lien*/
+   background-color: #dddddde3;
+   color: black;
+   border-radius: 10px;
+ }
+
+ html {
+   scroll-behavior: smooth;
+ }
+
+ section {
+   height: 100vh;
+   /* Set the height of each section as the viewport height */
+
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: cover;
+   background-blend-mode: screen;
+
+   background-attachment: scroll;
+ }
+
+ .contenthome {
     color: white;
-    display: flex;
-    justify-content: center;
-    margin-top: 200px;
-    font-size: 80px;
-    color: rgb(170, 233, 223)
-  }
+   display: flex;
+   justify-content: center;
+   margin-top: 200px;
+   font-size: 80px;
+   color: rgb(170, 233, 223)
+ }
 
-  /*------------------home------------------*/
-   
-   #home{
-    background-image: url(Home.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-   
-    background-position: center;
-    overflow: auto;
-    margin: 0;
-    padding: 0;
-    height: 100vh; /* Utilise la hauteur de la fenêtre pour les sections */
-    }
-  
-  
-  .home-col-1{
-    display: flex;
-    align-items: center;
-    font-size: 80px;
-    color: rgb(170, 233, 223)
-  }
+ /*------------------home------------------*/
 
-  .home-col-2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-  
+ #home {
+   background-image: url(Home.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   overflow: auto;
+   margin: 0;
+   padding: 0;
+   height: 100vh;
+   /* Utilise la hauteur de la fenêtre pour les sections */
+ }
 
-  
-  /*------------------about------------------*/
-    #about{
-    background-image: url(About.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    overflow: auto;
-    margin: 0;
-    padding: 80px 0;
-    color: white; 
-    height: 100vh; /* Utilise la hauteur de la fenêtre pour les sections */
-     }
 
-   h1{
-    color: rgb(182, 234, 200);
-    font-size: 50px;
-    display: flex;
-    margin-left: 40px;
-   }  
-  
-  .row{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top:10px;
-  }
-  
-  .about-col-1 img{
-    /*flex:1;*/
-    width: 400px;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-  }
+ .home-col-1 {
+  font-family: Fontsk;
+   display: flex;
+   align-items: center;
+   font-size: 80px;
+   color: rgb(170, 233, 223)
+ }
 
-  .about-col-1{
-    flex: 1;
-    }
+ .home-col-2 {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 50px;
+ }
 
-  .about-col-2{
-    flex: 2;
-    margin-right: 200px;
-  }
-  
-   
-  .tab-titles{
-    display: flex;
-    margin: 10px 0 20px;
-    justify-content: space-evenly;
-  }
-  .tab-links
-  {
-    margin-right: 50px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
-  }
-  .tab-links::after
-  {
-   content: '';
+#bunny {
+  width: 200px;
+}
+
+
+ /*------------------about------------------*/
+ #about {
+   background-image: url(About.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   overflow: auto;
+   margin: 0;
+   padding: 80px 0;
+   color: white;
+   height: 100vh;
+   /* Utilise la hauteur de la fenêtre pour les sections */
+ }
+
+ h1 {
+  font-family: Fontsk; 
+  color: rgb(182, 234, 200);
+   font-size: 50px;
+   display: flex;
+   margin-left: 40px;
+ }
+
+ .row {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   margin-top: 10px;
+ }
+
+ .about-col-1 img {
+   /*flex:1;*/
+   width: 400px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .about-col-1 {
+   flex: 1;
+ }
+
+ .about-col-2 {
+   flex: 2;
+   margin-right: 200px;
+ }
+
+
+ .tab-titles {
+  font-family: Fontsk;
+   display: flex;
+   margin: 10px 0 20px;
+   justify-content: space-evenly;
+ }
+
+ .tab-links {
+   margin-right: 50px;
+   font-size: 18px;
+   font-weight: 500;
+   cursor: pointer;
+   position: relative;
+ }
+
+ .tab-links::after {
+    content: '';
    width: 0;
    height: 3px;
    background: rgb(182, 234, 200);
@@ -152,78 +166,79 @@
    left: 0;
    bottom: -8px;
    transition: 0.5s;
-  }
-  .tab-links.active-link::after   
-  {
-    width: 50%;
-  }
-  .tab-contents ul li
-  {
-    list-style: none;
-    margin: 10px 0;
-  }
-  .tab-contents ul li span
-  {
-    color: rgb(182, 234, 200);
-    font-size: 16px;
-    font-weight: bold;
-  }
+ }
 
-    .tab-contents
-  {
-    display: none;
-  }
-  .tab-contents.active-tab
-  {
-    display: block;
-  }
- 
-  #photoshop{
-    width: 10px;
-  }
-  
-  /*------------------portfolio------------------*/
-  #portfolio{
-    background-image: url(Test-2.0_03.jpg);
-   
-    background-repeat: no-repeat;
-  
-    background-position: center;
-    overflow: auto;
-    margin: 0;
-    padding: 0;
-    height: 100vh; /* Utilise la hauteur de la fenêtre pour les sections */
-  
-   }
+ .tab-links.active-link::after {
+   width: 50%;
+ }
 
-   .slider-wrapper .image-list{
-    display:grid;
-    gap: 10px;
-    overflow-x: auto;
-    grid-template-columns: repeat (10, 1fr);
-   }
+ .tab-contents ul li {
+   list-style: none;
+   margin: 10px 0;
+ }
 
-   .slider-wrapper .image-list .image-item{
-    width: 220px;
-    height: 300px; 
-    object-fit: cover;
-   }
+ .tab-contents ul li span {
+   color: rgb(182, 234, 200);
+   font-size: 16px;
+   font-weight: bold;
+ }
 
-  /*------------------contact------------------*/
-  #contact{
-    background-image: url(Contact\ bis.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  
-    background-position: center;
-    overflow: auto;
-    margin: 0;
-    padding: 0;
-    height: 100vh; /* Utilise la hauteur de la fenêtre pour les sections */
-   }
+ .tab-contents {
+   display: none;
+ }
 
-   body
-   {
-    margin: 0;
-    padding: 0;
-   }
+ .tab-contents.active-tab {
+   display: block;
+ }
+
+ #photoshop {
+   width: 10px;
+ }
+
+ /*------------------portfolio------------------*/
+ #portfolio {
+   background-image: url(NV-VE_03.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   overflow: auto;
+   margin: 0;
+   padding: 0;
+   height: 100vh;
+   /* Utilise la hauteur de la fenêtre pour les sections */
+ }
+
+.wrapper{
+  max-width: 1200px;
+}
+
+.wrapper .caroussel{
+  cursor: pointer;
+  white-space: nowrap;
+  object-fit: cover;
+  overscroll-behavior: ;
+}
+
+.caroussel img{
+  height: 340px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+ /*------------------contact------------------*/
+ #contact {
+   background-image: url(NV-VE_04.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+
+   background-position: center;
+   overflow: auto;
+   margin: 0;
+   padding: 0;
+   height: 100vh;
+   /* Utilise la hauteur de la fenêtre pour les sections */
+ }
+
+ body {
+   margin: 0;
+   padding: 0;
+ }
