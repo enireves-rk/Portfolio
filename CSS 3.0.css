@@ -207,38 +207,95 @@
    /* Utilise la hauteur de la fenêtre pour les sections */
  }
 
+ body
+   {
+    margin: 0;
+    padding: 0;
+    
+   }
+
+   /* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 .wrapper{
+  display: flex;
   max-width: 1200px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
-.wrapper .caroussel{
+.wrapper i{
+  top: 50%;
+  height: 44px;
+  width: 44px;
+  color: #343F4F;
   cursor: pointer;
+  font-size: 1.15rem;
+  position: absolute;
+  text-align: center;
+  line-height: 44px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper i:active{
+  transform: translateY(-50%) scale(0.9);
+}
+.wrapper i:hover{
+  background: #f2f2f2;
+}
+.wrapper i:first-child{
+  left: -22px;
+  display: none;
+}
+.wrapper i:last-child{
+  right: -22px;
+}
+.wrapper .carousel{
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
   white-space: nowrap;
-  object-fit: cover;
-  overscroll-behavior: ;
+  scroll-behavior: smooth;
+}
+.carousel.dragging{
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.carousel.dragging img{
+  pointer-events: none;
 }
 
-.caroussel img{
+.wrapper .carousel a:hover {
+  opacity: 0.8;
+}
+.carousel img{
   height: 340px;
-  margin-left: 25px;
-  margin-right: 25px;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 14px;
+  width: calc(100% / 3);
+}
+.carousel img:first-child{
+  margin-left: 0px;
 }
 
- /*------------------contact------------------*/
- #contact {
-   background-image: url(NV-VE_04.jpg);
-   background-size: cover;
-   background-repeat: no-repeat;
+@media screen and (max-width: 900px) {
+  .carousel img{
+    width: calc(100% / 2);
+  }
+}
 
-   background-position: center;
-   overflow: auto;
-   margin: 0;
-   padding: 0;
-   height: 100vh;
-   /* Utilise la hauteur de la fenêtre pour les sections */
- }
-
- body {
-   margin: 0;
-   padding: 0;
- }
+@media screen and (max-width: 550px) {
+  .carousel img{
+    width: 100%;
+  }
+}
