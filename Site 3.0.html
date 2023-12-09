@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="CSS 3.0.css">
-  <title> Génie Séverine</title>
+    <title> Génie Séverine</title>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -24,7 +25,7 @@
         Séverine KHUN
       </div>
       <div class="home-col-2">
-        <img src="bunny.png" id="bunny">
+        <img src="bunny.png">
       </div>
     </div>
   </section>
@@ -100,7 +101,7 @@
             <ul>
               <li>
                 <span>Informatique</span>
-                <img src="Adobe_Photoshop_CC_icon.svg.png" id="photoshop">
+              <img src="Adobe_Photoshop_CC_icon.svg.png" id="photoshop">
               </li>
               <li>
                 <span>Langues</span><br>Anglais C1,
@@ -115,22 +116,22 @@
 
   <section id="portfolio">
     <h1>Portfolio</h1>
-    <div class="wrapper">
-      <div class="caroussel">
-        <img src="Dessin1.png">
-        <img src="Design sans titre.gif">
-        <img src="Dessin2.png">
-        <img src="Dessin3.png">
-        <img src="Dessin4.png">
-        <img src="Dessin5.png">
-        <img src="Dessin6.png">
-        <img src="Dessin7.png">
-        <img src="Dessin8.png">
-        <img src="Dessin9.png">
-
-      </div>
-    </div>
-
+<div class="wrapper">
+  <i id="left" class="fa-solid fa-angle-left"></i>
+  <div class="carousel">
+    <a href="test.html"><img src="Dessin1.png" alt="img" draggable="false"></a>
+    <a href="test.html"> <img src="Design sans titre.gif" alt="img" draggable="false"></a>
+    <a href="test.html"> <img src="Dessin2.png" alt="img" draggable="false"></a>
+    <a href="test.html"><img src="Dessin3.png" alt="img" draggable="false"></a>
+    <a href="test.html"><img src="Dessin4.png" alt="img" draggable="false"></a>
+    <a href="test.html"> <img src="Dessin5.png" alt="img" draggable="false"></a>
+    <a href="test.html"> <img src="Dessin6.png" alt="img" draggable="false"></a>
+    <a href="test.html"> <img src="Dessin7.png" alt="img" draggable="false"></a>
+    <a href="test.html"><img src="Dessin8.png" alt="img" draggable="false"></a>
+    <a href="test.html"><img src="Dessin9.png" alt="img" draggable="false"></a>
+  </div>
+  <i id="right" class="fa-solid fa-angle-right"></i>
+</div>
   </section>
 
   <section id="contact">
@@ -146,20 +147,4 @@
   </section>
 
 
-
-
-  <script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-    function opentab(tabname) {
-      for (tablink of tablinks) {
-        tablink.classList.remove("active-link")
-      }
-      for (tabcontent of tabcontents) {
-        tabcontent.classList.remove("active-tab")
-      }
-      event.currentTarget.classList.add("active-link");
-      document.getElementById(tabname).classList.add("active-tab");
-    }
-  </script>
 </body>
