@@ -189,6 +189,19 @@
    width: 25px;
  }
 
+ #illustrator {
+  width: 25px;
+}
+
+#premiere {
+  width: 25px;
+}
+
+#after{
+  width: 25px;
+}
+
+
  /*------------------portfolio------------------*/
  #portfolio {
    background-image: url(NV-VE_03.jpg);
