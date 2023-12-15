@@ -1,7 +1,4 @@
-@font-face {
-  font-family: "Fontsk";
-  src: url('Myfontsk-Regular.ttf')}
- 
+
  /*------------------barre de navigation------------------*/
  .navbar {
    display: flex;
@@ -76,7 +73,6 @@
 
 
  .home-col-1 {
-  font-family: Fontsk;
    display: flex;
    align-items: center;
    font-size: 80px;
@@ -87,11 +83,11 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 50px;
  }
 
 #bunny {
-  width: 200px;
+  width: 220px;
+  margin-left: 180px;
 }
 
 
@@ -110,7 +106,6 @@
  }
 
  h1 {
-  font-family: Fontsk; 
   color: rgb(182, 234, 200);
    font-size: 50px;
    display: flex;
@@ -143,7 +138,6 @@
 
 
  .tab-titles {
-  font-family: Fontsk;
    display: flex;
    margin: 10px 0 20px;
    justify-content: space-evenly;
@@ -192,7 +186,7 @@
  }
 
  #photoshop {
-   width: 10px;
+   width: 25px;
  }
 
  /*------------------portfolio------------------*/
@@ -214,7 +208,7 @@
     
    }
 
-   /* Import Google font - Poppins */
+    /* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 *{
   margin: 0;
@@ -298,4 +292,29 @@
   .carousel img{
     width: 100%;
   }
+}
+
+ /*------------------Contact------------------*/
+ #contact {
+  background-image: url(NV-VE_04.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  /* Utilise la hauteur de la fenêtre pour les sections */
+}
+
+body
+  {
+   margin: 0;
+   padding: 0;
+     }
+
+.contact-col-2{
+  color:rgb(16, 117, 100);
+  display:flex;
+  justify-content: center;
+  margin-top: 160px;
 }

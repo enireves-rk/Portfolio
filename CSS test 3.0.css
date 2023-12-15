@@ -1,0 +1,116 @@
+body{
+    background-image: url(NV-VE_03.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    /* Utilise la hauteur de la fenêtre pour les sections */
+  }
+ 
+  body
+    {
+     margin: 0;
+     padding: 0;
+    }
+    
+
+/* carroussel */
+
+*{box-sizing: border-box}
+
+.slider_focus{
+
+max-width: 750px;
+margin: 2rem auto;
+
+	}	
+	
+.slider_focus ul{
+margin: 0;
+/*reset ul*/
+padding: 0;
+list-style-type:none;
+/*reset ul*/
+display:flex;
+position: relative;
+justify-content: center;
+overflow: hidden;
+aspect-ratio:3/2;gap:.5rem;
+
+	
+}
+
+
+.slider_focus ul li{
+	
+align-self:flex-end;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom:.5rem;
+height:4rem;
+width: 4rem;
+
+}
+	
+.slider_focus ul li button	
+	
+{ 
+all: unset;
+padding:0;
+border:0;
+cursor: pointer; 
+}
+
+.slider_focus ul li button img{
+	
+border-radius: 50%;
+border:2px solid white; 
+width:4rem;
+height:4rem;object-fit: cover
+
+	}
+
+	
+.slider_focus ul li span img{
+	
+display:block;
+position:absolute;
+top:0;
+left:0;
+height:100%;
+width:100%;
+transform:translateX(-100%);
+z-index:-1;
+opacity:0;
+will-change: transform,opacity;
+transition:transform .6s,opacity .6s
+	
+	}
+
+.slider_focus ul:not(:focus-within) li:first-child span img,
+.slider_focus ul li:focus-within span img{
+	
+transform:translateX(0%);
+opacity:1
+	
+	}
+
+
+.slider_focus ul li:focus-within{
+
+outline:2px solid black;
+border-radius: 50%
+
+}
+	
+
+.slider_focus ul:not(:focus-within) li:first-child button img,	
+.slider_focus ul li:focus-within button img{
+
+opacity: .4
+
+}
+
