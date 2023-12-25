@@ -4,17 +4,13 @@ body{
     background-position: center;
     overflow: auto;
     margin: 0;
-    padding: 0;
+     padding: 0;
     height: 100vh;
+    display: flex;
+    align-items: center;
     /* Utilise la hauteur de la fenêtre pour les sections */
   }
- 
-  body
-    {
-     margin: 0;
-     padding: 0;
-    }
-    
+
 
 /* carroussel */
 
@@ -22,8 +18,12 @@ body{
 
 .slider_focus{
 
-max-width: 750px;
-margin: 2rem auto;
+width: 100%;
+height: 100%;
+display:flex;
+position: absolute;
+justify-content: center;
+align-items: center;
 
 	}	
 	
@@ -38,7 +38,8 @@ position: relative;
 justify-content: center;
 overflow: hidden;
 aspect-ratio:3/2;gap:.5rem;
-
+width: 50%;
+align-items: center;
 	
 }
 
@@ -46,9 +47,6 @@ aspect-ratio:3/2;gap:.5rem;
 .slider_focus ul li{
 	
 align-self:flex-end;
-display: flex;
-align-items: center;
-justify-content: center;
 margin-bottom:.5rem;
 height:4rem;
 width: 4rem;
@@ -113,4 +111,20 @@ border-radius: 50%
 opacity: .4
 
 }
+.image-title {
+  position: absolute;
+  top: 10%; /* Adjust the top value as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white; /* Change the color as needed */
+  font-size: 18px; /* Change the font size as needed */
+}
+.return-button
+{
+  z-index: 1;
+ position: relative;
+ padding: 20px;
+ bottom:25%;
+}
 
+/*music player */

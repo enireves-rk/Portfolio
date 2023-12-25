@@ -8,43 +8,85 @@
     <link rel="htmlsheet" href="Site 3.0.html">
     <title>La génie</title>
     </head>
+    <body>
+        
+   
+        <script src="https://kit.fontawesome.com/b6771f81c5.js" crossorigin="anonymous"></script>
 
-
-
+    <a href="#" onclick="history.go(-1);" class="return-button">
+        <i id="return" class="fa-solid fa-angle-left fa-2xl" style="color: #B6EAC8;"></i>
+    </a>
     <div class=slider_focus>
 
         <ul>
         
-        <li tabindex="0">
+        <li tabindex="0"onclick="changeTitle('Title 1')">
         
         <button tabindex="-1">
         <img src="digi1.png" alt>
         </button>
         <span><img src="digi1.png" alt></span>
-        
+      
         </li>
         
-        <li tabindex="0">
+        <li tabindex="0" onclick="changeTitle('Title 2')">
         
         <button tabindex="-1">
         <img src="digi2.png" alt>
         </button>
         <span><img src="digi2.png" alt></span>
-        
+  
         </li>
         
-        <li tabindex="0">
+        <li tabindex="0" onclick="changeTitle('Title 3')">
         <button tabindex="-1">
         <img src="digi4.png" alt>
         </button>
         <span><img src="digi4.png" alt></span>
-        
+   
         </li>
         
-              
+
         </ul>
         
         </div>
+        <div id="imageTitle" class="image-title">Default Title</div>
+       <!-- <script>
+            const imageTitles = document.querySelectorAll('.image-title');
+            const sliderItems = document.querySelectorAll('.slider_focus ul li');
         
+            // Show the title of the first image by default
+            showTitle(0);
+        
+            sliderItems.forEach((item, index) => {
+                item.addEventListener('click', () => {
+                    hideAllTitles();
+                    showTitle(index);
+                });
+            });
+        
+            function hideAllTitles() {
+                imageTitles.forEach(title => {
+                    title.style.display = 'none';
+                });
+            }
+        
+            function showTitle(index) {
+                imageTitles[index].style.display = 'block';
+            }
+        </script>-->
+        <script>
+            // Function to change the image and title
+            changeTitle('Title 1');
+            function changeTitle(title) {
+                // Update the title
+                document.getElementById('imageTitle').innerText = title;
+    
+            }
+        </script>
+        
+        
+    </body>
+</html>
         
         

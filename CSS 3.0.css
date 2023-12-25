@@ -4,7 +4,7 @@
    display: flex;
    justify-content: space-around;
    align-items: center;
-   background-color: #333;
+   background-color: rgba(51, 51, 51, 0.5);
    position: fixed;
    top: 20px;
    width: 50%;
@@ -15,6 +15,7 @@
    transition: top 0.3s;
    left: 50%;
    transform: translateX(-50%);
+   z-index: 1000;
  }
 
  .navbar a {
@@ -49,92 +50,103 @@
  }
 
  .contenthome {
-    color: white;
+   color: white;
    display: flex;
    justify-content: center;
-   margin-top: 200px;
    font-size: 80px;
-   color: rgb(170, 233, 223)
+   color: rgb(170, 233, 223);
+   text-align: center; /* Center the text horizontally */
  }
+
 
  /*------------------home------------------*/
 
  #home {
-   background-image: url(Home.png);
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center;
-   overflow: auto;
-   margin: 0;
-   padding: 0;
-   height: 100vh;
-   /* Utilise la hauteur de la fenêtre pour les sections */
- }
-
-
- .home-col-1 {
-   display: flex;
-   align-items: center;
-   font-size: 80px;
-   color: rgb(170, 233, 223)
- }
-
- .home-col-2 {
-   display: flex;
-   justify-content: center;
-   align-items: center;
- }
-
-#bunny {
-  width: 220px;
-  margin-left: 180px;
+  background-image: url(Home.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  /* Utilize the height of the window for the sections */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
+.home-col-1 {
+  display: flex;
+  align-items: center;
+  font-size: 80px;
+  color: rgb(170, 233, 223);
+  text-align: center; /* Center the text horizontally */
+}
+
+.home-col-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bunny {
+ width: 220px;
+ margin-left: 180px;
+}
+
  /*------------------about------------------*/
  #about {
-   background-image: url(About.jpg);
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center;
-   overflow: auto;
-   margin: 0;
-   padding: 80px 0;
-   color: white;
-   height: 100vh;
-   /* Utilise la hauteur de la fenêtre pour les sections */
- }
+  background-image: url(About.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: auto;
+  margin: 0;
+  padding: 80px 0;
+  color: white;
+  height: 100vh;
+  
+}
 
- h1 {
+h1 {
   color: rgb(182, 234, 200);
-   font-size: 50px;
-   display: flex;
-   margin-left: 40px;
- }
+  font-size: 50px;
+  margin-left: 40px;
+}
 
- .row {
-   display: flex;
-   justify-content: space-between;
-   flex-wrap: wrap;
-   margin-top: 10px;
- }
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  height: 580px; /* Set your desired fixed height */
+  overflow: hidden; /* Hide overflowing content */
+}
 
- .about-col-1 img {
-   /*flex:1;*/
-   width: 400px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
- }
+.about-col-1 img {
+  max-height: 100%; /* Allow the image to take the full height of the row */
+  width: 100%; /* Maintain the aspect ratio of the image */
+  display: block;
+  margin: auto;
+}
 
- .about-col-1 {
-   flex: 1;
- }
+.about-col-1 {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center;
+}
 
- .about-col-2 {
-   flex: 2;
-   margin-right: 200px;
- }
+.about-col-2 {
+  flex: 2;
+  margin-right: 10%;
+  overflow-y: auto; /* Add a scrollbar if content overflows vertically */
+  padding-right: 20px; /* Optional: Add some padding to the right side */
+}
+
 
 
  .tab-titles {
@@ -169,6 +181,7 @@
  .tab-contents ul li {
    list-style: none;
    margin: 10px 0;
+ 
  }
 
  .tab-contents ul li span {
@@ -178,7 +191,11 @@
  }
 
  .tab-contents {
+  background: rgba(169, 169, 169, 0.3); 
    display: none;
+   border: 5px solid rgba(169, 169, 169, 0.3); /* Transparent gray border around each ul */
+   border-radius: 1%;
+   padding: 10px;
  }
 
  .tab-contents.active-tab {
@@ -210,10 +227,15 @@
    overflow: auto;
    margin: 0;
    padding: 0;
+   position: relative;
    height: 100vh;
    /* Utilise la hauteur de la fenêtre pour les sections */
  }
-
+ #portfolio h1 {
+  position: relative;
+  z-index: 1;
+  top: 23%; 
+}
  body
    {
     margin: 0;
@@ -231,7 +253,7 @@
 }
 
 .wrapper{
-  display: flex;
+  
   max-width: 1200px;
   position: relative;
   top: 50%;
@@ -290,23 +312,55 @@
   user-select: none;
   margin-left: 14px;
   width: calc(100% / 3);
+  
 }
 .carousel img:first-child{
-  margin-left: 0px;
+  margin-left: 14px;
 }
 
 @media screen and (max-width: 900px) {
   .carousel img{
     width: calc(100% / 2);
+    
   }
 }
 
 @media screen and (max-width: 550px) {
   .carousel img{
     width: 100%;
+  
+  }
+}
+@media screen and (max-height: 700px) {
+  .carousel img{
+    height: 240px;
+    
   }
 }
 
+@media screen and (max-height: 550px) {
+  .carousel img{
+    height: 140px;
+  
+  }
+}
+.image-container {
+  position: relative;
+  
+}
+
+.image-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7); 
+  color: #fff; 
+  padding: 4px; 
+  margin-left: 14px;
+  font-size: 30px;
+  /*display: block;*/
+  
+}
  /*------------------Contact------------------*/
  #contact {
   background-image: url(NV-VE_04.jpg);
@@ -319,15 +373,26 @@
   /* Utilise la hauteur de la fenêtre pour les sections */
 }
 
-body
-  {
-   margin: 0;
-   padding: 0;
-     }
-
+.contact-col-2 ul p {
+  display: flex;
+height: 32px;;
+align-items :center;
+  margin-bottom: 5% /* Adjust the margin as needed for spacing between paragraphs */
+}
+.contact-col-2 ul p a{
+ margin-left: 10px;
+ color: rgb(16, 117, 100);
+ text-decoration: none; 
+}
+.contact-col-2 ul p i{
+  display: flex;
+  align-items: center;
+  color: #0667c7;
+}
 .contact-col-2{
   color:rgb(16, 117, 100);
   display:flex;
   justify-content: center;
-  margin-top: 160px;
+  margin-top: 15%;
 }
+
