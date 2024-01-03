@@ -1,4 +1,21 @@
+@font-face {
+  font-family: 'LibreBaskerville-Regular';
+  src: url('LibreBaskerville-Regular.ttf') format('truetype');
+}
 
+@font-face {
+  font-family: 'LibreBaskerville-Bold';
+    src : url('LibreBaskerville-Bold.ttf') format('truetype');
+}
+
+body{
+  font-family: 'LibreBaskerville-Regular', sans-serif;
+}
+
+.bold{
+  font-family: 'LibreBaskerville-Bold', sans-serif;
+}
+ 
  /*------------------barre de navigation------------------*/
  .navbar {
    display: flex;
