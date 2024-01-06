@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS_Animation.css">
+    <title>Video and GIFs on Scroll</title>
+    <style>
+      
+    </style>
+</head>
+<body>
+    <script src="https://kit.fontawesome.com/b6771f81c5.js" crossorigin="anonymous"></script>
+    <a href="#" onclick="history.go(-1);" class="return-button">
+        <i id="return" class="fa-solid fa-angle-left fa-2xl" style="color: #B6EAC8;"></i>
+    </a>
+    <div id="video-container">
+        <video controls>
+            <source src="akmu.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="gif-container">
+        <img class="gif" src="anim1.gif" alt="GIF 1">
+        <img class="gif" src="anim1.gif" alt="GIF 2">
+        <!-- Add more gif images as needed -->
+    </div>
+
+</body>
+</html>
