@@ -9,6 +9,7 @@
   <script src="script.js" defer></script>
 </head>
 
+<!--Barre de navigation principale-->
 <body>
   <div class="navbar">
     <a href="#home"> Accueil</a>
@@ -16,9 +17,8 @@
     <a href="#portfolio"> Portfolio</a>
     <a href="#contact"> Contact</a>
   </div>
-<!--mobile navbar-->
 
-
+<!--Barre de navigation mobile--> 
     <div class="navbar-hamburger">
       <div class="navbar-container container">
           <input type="checkbox" name="" id="">
@@ -38,20 +38,19 @@
   </div>
     
 
-  <!-- 
-    .................../ JS Code for smooth scrolling /...................... -->
+<!--Script Java pour un défilement fluide-->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
     $(document).ready(function () {
-      // Add smooth scrolling to all links
+      // script pour le défilement fluide des liens internes
       $("a").on("click", function (event) {
-        // Make sure this.hash has a value before overriding default behavior
+        // vérifie si le lien à un hachage
         if (this.hash !== "") {
-          // Prevent default anchor click behavior
+          // empêche les défauts du lien
           event.preventDefault();
 
-          // Store hash
+          // stocke la hachage
           var hash = this.hash;
 
           // Using jQuery's animate() method to add smooth page scroll
@@ -66,38 +65,42 @@
               window.location.hash = hash;
             }
           );
-        } // End if
+        } 
       });
     });
   </script>
-<!--end mobile-->
 
+<!--Section Accueil-->
   <section id="home">
     <div class="contenthome">
       <div class="home-col-1">
         Séverine KHUN
       </div>
       <div class="home-col-2">
-        <img src="bunny.png" id="bunny">
+        <img src="Images/Fond site/bunny.png" id="bunny">
       </div>
     </div>
   </section>
 
+  <!--Section à propos-->
   <section id="about">
 
     <div class="container">
       <div class="row">
         <div class="about-col-1">
-          <img src="Nv moi.PNG" id="moi">
+          <img src="Images/Fond site/Moi.PNG" id="moi">
         </div>
+          <!--Sous-titre "à propos"-->
         <div class="about-col-2">
           <h1 class="sub-title">À propos</h1>
           <p> </p>
+           <!--Catégories de la section "à propos"-->
           <div class="tab-titles">
             <p class="tab-links active-link" onclick="opentab('education')">Études et Formations</p>
             <p class="tab-links" onclick="opentab('experience')">Expériences professionnelles</p>
             <p class="tab-links" onclick="opentab('skills')">Compétences</p>
           </div>
+           <!--Section "éducation"-->
           <div class="tab-contents active-tab" id="education">
             <ul>
               <li>
@@ -119,6 +122,7 @@
               </ul>
             </ul>
           </div>
+           <!--Section "expériences"-->
           <div class="tab-contents" id="experience">
             <ul>
               <li>
@@ -134,15 +138,17 @@
               </li>
             </ul>
           </div>
+           <!--Section "compétences"-->
           <div class="tab-contents" id="skills">
             <ul>
               <li>
                 <span>Informatique</span>
               </li>
-               <img src="Adobe_Photoshop_CC_icon.svg.png" id="photoshop">
-               <img src="Adobe_Illustrator_CC_icon.svg.png" id="illustrator">
-               <img src="Adobe_Premiere_Pro_CC_icon.svg.png" id="premiere">
-               <img src="Adobe_After_Effects_CC_icon.svg.png" id="after"></li>
+               <img src="Images/Images Infos/Adobe_Photoshop_CC_icon.svg.png" id="photoshop">
+               <img src="Images/Images Infos/Adobe_Illustrator_CC_icon.svg.png" id="illustrator">
+               <img src="Images/Images Infos/Adobe_Premiere_Pro_CC_icon.svg.png" id="premiere">
+               <img src="Images/Images Infos/Adobe_After_Effects_CC_icon.svg.png" id="after">
+               <img src="Images/Images Infos/Procreate-icon.png" id="procreate"></li>
              
             </ul>
           </div>
@@ -152,24 +158,25 @@
 
   </section>
 
+    <!--Section portfolio-->
   <section id="portfolio">
     <h1>Portfolio</h1>
     <div class="wrapper">
       <i id="left" class="fa-solid fa-angle-left"></i>
       <div class="carousel">
-        <a class="image-container" href="Galerie.html"> <img src="digi1.png" alt="img" draggable="false">
+        <a class="image-container" href="Galerie.html"> <img src="Images/Couverture portfolio/numérique.png" alt="img" draggable="false">
           <div class="image-title">Dessins numériques</div>
         </a>
-        <a class="image-container" href="Animation.html"> <img src="anim1.gif" alt="img" draggable="false">
+        <a class="image-container" href="Animation.html"> <img src="Images/Couverture portfolio/animation.PNG" alt="img" draggable="false">
           <div class="image-title">Animation et vidéo</div>
         </a>
-        <a class="image-container" href="Galerie.html"><img  src="dessin1.png" alt="img" draggable="false">
+        <a class="image-container" href="Galerie.html"><img  src="Images/Couverture portfolio/tradi.png" alt="img" draggable="false">
           <div class="image-title">Dessins traditionnels</div>
         </a>
-        <a class="image-container" href="Galerie.html"><img  src="peint1.png" alt="img" draggable="false">
+        <a class="image-container" href="Galerie.html"><img  src="Images/Couverture portfolio/aquarelle.png" alt="img" draggable="false">
           <div class="image-title">Aquarelles</div>
         </a>
-        <a class="image-container" href="Galerie.html"> <img src="loup garou.PNG" alt="img" draggable="false">
+        <a class="image-container" href="Galerie.html"> <img src="Images/Couverture portfolio/loup garou.PNG" alt="img" draggable="false">
           <div class="image-title"> Cartes loup garou</div>
         </a>
       </div>
@@ -177,6 +184,7 @@
     </div>
   </section>
 
+    <!--Section contact-->
   <section id="contact">
     <h1>Contact</h1>
    
@@ -197,13 +205,14 @@
      
     </ul>
   </div>
+   <!--Ajout de la bande sonore-->
   <audio controls id="audio" >
-    <source src="Kidnap Kid - Moments (feat. Leo Stannard).mp3 " type="audio/mpeg">
+    <source src="Musique/Kidnap Kid - Moments (feat. Leo Stannard).mp3" type="audio/mpeg">
   Your browser does not support the audio element.
   </audio>
     </section>
  
  
-   
+    <!--importation du script FontAwesome-->
   <script src="https://kit.fontawesome.com/b6771f81c5.js" crossorigin="anonymous"></script>
 </body>

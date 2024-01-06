@@ -1,21 +1,6 @@
-@font-face {
-  font-family: 'LibreBaskerville-Regular';
-  src: url('LibreBaskerville-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'LibreBaskerville-Bold';
-    src : url('LibreBaskerville-Bold.ttf') format('truetype');
-}
-
 body{
-  font-family: 'LibreBaskerville-Regular', sans-serif;
-}
+  font-family:Georgia, serif}
 
-.bold{
-  font-family: 'LibreBaskerville-Bold', sans-serif;
-}
- 
  /*------------------barre de navigation------------------*/
  .navbar {
    display: flex;
@@ -79,7 +64,7 @@ body{
  /*------------------home------------------*/
 
  #home {
-  background-image: url(Home.png);
+  background-image: url(Images/Fond\ site/home.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -116,7 +101,7 @@ body{
 
  /*------------------about------------------*/
  #about {
-  background-image: url(About.jpg);
+  background-image: url(Images/Fond\ site/about.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -148,7 +133,7 @@ h1 {
 
 .about-col-1 img {
   max-height: 100%; /* Allow the image to take the full height of the row */
-  width: 100%; /* Maintain the aspect ratio of the image */
+    width: 100%; /* Maintain the aspect ratio of the image */
   display: block;
   margin: auto;
 }
@@ -237,10 +222,14 @@ h1 {
   width: 25px;
 }
 
+#procreate{
+  width: 25px;
+}
+
 
  /*------------------portfolio------------------*/
  #portfolio {
-   background-image: url(NV-VE_03.jpg);
+   background-image: url(Images/Fond\ site/portfolio.jpg);
    background-repeat: no-repeat;
    background-position: center;
    overflow: auto;
@@ -380,7 +369,7 @@ h1 {
 }
  /*------------------Contact------------------*/
  #contact {
-  background-image: url(NV-VE_04.jpg);
+  background-image: url(Images/Fond\ site/contact.jpg);
   background-repeat: no-repeat;
   background-position: center;
   overflow: auto;

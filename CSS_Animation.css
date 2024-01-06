@@ -1,7 +1,13 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    background-image: url(Images/Fond\ site/fond.png);
+    background-position: center;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    position:relative
 }
+
 #return
 {
   z-index: 1;
@@ -26,11 +32,16 @@ video {
 
 .gif-container {
     text-align: center;
-    margin: 20px 0;
+    margin-top: auto;
+    margin-bottom: 30px;
 }
 
-.gif {
-    
-    max-width: 100%;
-    border-radius: 8px;
+#ange{
+    width: 30%
 }
+
+#yangpa{
+    width:30%;
+}
+
+  
