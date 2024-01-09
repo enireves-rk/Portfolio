@@ -16,67 +16,8 @@
     <a href="#" onclick="history.go(-1);" class="return-button">
         <i id="return" class="fa-solid fa-angle-left fa-2xl" style="color: #B6EAC8;"></i>
     </a>
-   <!-- <div class=slider_focus>
 
-        <ul>
-        
-        <li tabindex="0"onclick="changeTitle('Title 1')">
-        
-        <button tabindex="-1">
-        <img src="digi1.png" alt>
-        </button>
-        <span><img src="digi1.png" alt></span>
-      
-        </li>
-        
-        <li tabindex="0" onclick="changeTitle('Title 2')">
-        
-        <button tabindex="-1">
-        <img src="digi2.png" alt>
-        </button>
-        <span><img src="digi2.png" alt></span>
-  
-        </li>
-        
-        <li tabindex="0" onclick="changeTitle('Title 3')">
-        <button tabindex="-1">
-        <img src="digi4.png" alt>
-        </button>
-        <span><img src="digi4.png" alt></span>
-   
-        </li>
-        
-
-        </ul>
-        
-        </div>
-        <div id="imageTitle" class="image-title">Default Title</div>
-        -->
-       <!-- <script>
-            const imageTitles = document.querySelectorAll('.image-title');
-            const sliderItems = document.querySelectorAll('.slider_focus ul li');
-        
-            // Show the title of the first image by default
-            showTitle(0);
-        
-            sliderItems.forEach((item, index) => {
-                item.addEventListener('click', () => {
-                    hideAllTitles();
-                    showTitle(index);
-                });
-            });
-        
-            function hideAllTitles() {
-                imageTitles.forEach(title => {
-                    title.style.display = 'none';
-                });
-            }
-        
-            function showTitle(index) {
-                imageTitles[index].style.display = 'block';
-            }
-        </script>-->
-        <script>
+     <!--   <script>
             // Function to change the image and title
             changeTitle('Title 1');
             function changeTitle(title) {
@@ -85,69 +26,66 @@
     
             }
         </script>
-       
-        <div class="row">
-            <div class="column">
-              <img src="Images/Numérique/aurore.JPG" >
-              <img src="Images/Numérique/cooking mama.jpeg">
-             
-            </div>
-            <div class="column">
-                <img src="Images/Numérique/lulea.JPG">
-                <img src="Images/Numérique/ponpon & titi.JPG">
-                <img src="Images/Numérique/princess & la grenouille.PNG">
-                
-            </div>
+       -->
+
+    
+    
+
+
+        <div class="row"  id="images-container">
+           
   
          
           </div>
-        </div>
-
-        /*dessins tradi*/
-        <div class="">
-            <div class="column">
-              <img src="Images/Dessins tradi/Ciel.jpg" >
-              <img src="Images/Dessins tradi/lino.jpg">
-              <img src="Images/Dessins tradi/Stylo.jpg">
-             
-            </div>
-            <div class="column">
-                <img src="Images/Dessins tradi/Newt.jpg">
-                <img src="Images/Dessins tradi/statue.jpg">
-                <img src="Images/Dessins tradi/statue.jpg">
-                
-            </div>
-
-            /*aquarelles*/
-            <div class="">
-                <div class="column">
-                  <img src="Images/Aquarelles/Abisko.jpg" >
-                  <img src="Images/Aquarelles/Italie.jpg">
-                              
-                </div>
-                <div class="column">
-                    <img src="Images/Aquarelles/Croco.jpg">
-                    <img src="Images/Aquarelles/noel.jpg">
-                    <img src="Images/Aquarelles/page 3.jpg">
-                    
-                </div>
-               
-                /*loupgarou*/
-                <div class="">
-                    <div class="column">
-                      <img src="Images/Loup Garou/loup.PNG" >
-                      <img src="Images/Loup Garou/chasseurs.PNG">
-                      <img src="Images/Loup Garou/petite fille.PNG">
-                     
-                    </div>
-                    <div class="column">
-                        <img src="Images/Loup Garou/sorcière.PNG">
-                        <img src="Images/Loup Garou/villageois.PNG">
-                                               
-                    </div>
-          
       
-  
+          <script>
+            function changeCategory(category,numImages) {
+                var imagesContainer = document.getElementById('images-container');
+        
+                // Check if the element exists
+                if (imagesContainer) {
+                    // Clear existing images
+                    imagesContainer.innerHTML = '';
+        
+                    // Define the number of columns and images per column
+                    var columns = 2;
+                    var imagesPerColumn = [2, 3];
+                    if(numImages==6){
+                     imagesPerColumn = [3, 3];
+                    }
+                   
+                    var totalImages = imagesPerColumn.reduce((a, b) => a + b, 0); // Total number of images
+        
+                    for (var i = 0; i < columns; i++) {
+                        var column = document.createElement('div');
+                        column.className = 'column';
+        
+                        // Calculate the starting index for the current column
+                        var startIndex = Math.floor(i * totalImages / columns); 
+        
+                        for (var j = 1; j <= imagesPerColumn[i]; j++) {
+                            var img = document.createElement('img');
+                            img.src = 'Images/' + category + '/' + (startIndex + j) + '.jpg';
+                            column.appendChild(img);
+                            console.log('image '+ j);
+                        }
+        
+                        imagesContainer.appendChild(column);
+                    }
+                } else {
+                    console.error("Element with id 'images-container' not found.");
+                }
+            }
+        
+            var urlParams = new URLSearchParams(window.location.search);
+            var category = urlParams.get('category');
+            var numImages = urlParams.get('numImages');
+            console.log(numImages)
+            if (category) {
+                changeCategory(category,numImages);
+            }
+        </script>
+        
 
     </body>
 </html>

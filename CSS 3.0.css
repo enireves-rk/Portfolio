@@ -1,5 +1,6 @@
 body{
-  font-family:Georgia, serif}
+  font-family:Georgia, serif
+}
 
  /*------------------barre de navigation------------------*/
  .navbar {
@@ -83,7 +84,7 @@ body{
 .home-col-1 {
   display: flex;
   align-items: center;
-  font-size: 80px;
+  font-size: 100px;
   color: rgb(170, 233, 223);
   text-align: center; /* Center the text horizontally */
 }
@@ -95,7 +96,7 @@ body{
 }
 
 #bunny {
- width: 220px;
+ width: 350px;
  margin-left: 180px;
 }
 
@@ -107,7 +108,7 @@ body{
   background-position: center;
   overflow: auto;
   margin: 0;
-  padding: 80px 0;
+ /* padding: 80px 0;*/
   color: white;
   height: 100vh;
   display: flex;
@@ -121,7 +122,10 @@ h1 {
   font-size: 50px;
   margin-left: 40px;
 }
-
+.about-col-2 h1
+{
+ margin-left: 0;
+}
 .row {
   display: flex;
   justify-content: space-between;
@@ -129,6 +133,7 @@ h1 {
   margin-top: 10px;
   height: 580px; /* Set your desired fixed height */
   overflow: hidden; /* Hide overflowing content */
+  text-align: center;
 }
 
 .about-col-1 img {
@@ -188,6 +193,10 @@ h1 {
    margin: 10px 0;
  
  }
+ .tab-contents ul  {
+
+  padding-inline-start: 0;
+}
 
  .tab-contents ul li span {
    color: rgb(182, 234, 200);
@@ -242,7 +251,7 @@ h1 {
  #portfolio h1 {
   position: relative;
   z-index: 1;
-  top: 23%; 
+  top: 10%; 
 }
  body
    {
@@ -257,7 +266,7 @@ h1 {
   display: flex;
   max-width: 1200px;
   position: relative;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -428,7 +437,7 @@ align-items :center;
   }
 
   .home-col-1 {
-    font-size: 50px; 
+    font-size: 70px; 
     margin: 20px;
   }
 
@@ -438,13 +447,13 @@ align-items :center;
   }
 
   #bunny {
-    width: 150px; 
+    width: 200px; 
     margin-left: 0; 
   }
 
   #about {
    
-    padding: 40px 20px; 
+    padding: 0 20px; 
     text-align: center; 
   }
 
@@ -523,7 +532,7 @@ align-items :center;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translate(-63%, -50%);
+  transform: translate(-70%, -50%);
 }
   .carousel {
     text-align: center;
@@ -579,12 +588,6 @@ align-items :center;
 
 /* ///////////..utility classes../////////// */
 
-.container {
-  max-width: 1200px;
-  width: 90%;
-  margin: auto;
-}
-
 
 
 
@@ -625,6 +628,9 @@ align-items :center;
     display: block;
     position: relative;
     height: 64px;
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
   }
 
   .navbar-container input[type="checkbox"] {
@@ -685,7 +691,7 @@ align-items :center;
     padding-left: 50px;
     transition: transform 0.5s ease-in-out;
     text-decoration: none; 
-   
+   margin-top: 0;
   }
 
 
