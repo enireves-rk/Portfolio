@@ -5,7 +5,8 @@ body {
     overflow: auto;
     margin: 0;
     padding: 0;
-    position:relative
+    position:relative;
+ 
 }
 
 #return
@@ -45,3 +46,25 @@ video {
 }
 
   
+/* Mobile styles */
+@media screen and (max-width: 768px) 
+{
+    #video-container {
+        height: 260px;
+        margin-top: 30px;
+    }
+    .gif-container {
+        
+        margin-bottom: 0;
+        height: 50vh;
+    }
+    
+    #ange{
+        width: 55%
+    }
+    
+    #yangpa{
+        width:55%;
+    }
+    
+}
