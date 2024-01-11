@@ -1,7 +1,7 @@
 /* Styles généraux du corps de la page */
 body {
     margin: 0;
-    background-image: url(Images/Fond\ site/fond.png);
+    background-image: url(../Images/Fond_site/fond.png);
     background-position: center;
     overflow: auto;
     margin: 0;
@@ -56,13 +56,16 @@ video {
         height: 260px;
         margin-top: 30px;
     }
+
     .gif-container {
         margin-bottom: 0;
         height: 50vh;
     }
+
     #ange {
         width: 55%;
     }
+
     #yangpa {
         width: 55%;
     }

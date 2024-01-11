@@ -1,12 +1,14 @@
 /* Réinitialisation des marges, ajout d'une image de fond et positionnement */
 body {
   margin: 0;
-  background-image: url(Images/Fond\ site/fond.png);
+  background-image: url(../Images/Fond_site/fond.png);
   background-position: center;
   overflow: auto;
-  margin: 0; /* Cette instruction est redondante et pourrait être omise */
+  margin: 0;
+  /* Cette instruction est redondante et pourrait être omise */
   padding: 0;
-  position: relative; /* Position relative pour les éléments enfants positionnés absolument */
+  position: relative;
+  /* Position relative pour les éléments enfants positionnés absolument */
 }
 
 /* Boîte englobante pour tous les éléments avec la boîte de modèle border-box */
@@ -18,7 +20,8 @@ body {
 body {
   margin: 0;
   font-family: Arial;
-  margin-bottom: 40px; /* Espace en bas pour éviter que le contenu ne soit caché sous les éléments fixes en bas de la page */
+  margin-bottom: 40px;
+  /* Espace en bas pour éviter que le contenu ne soit caché sous les éléments fixes en bas de la page */
 }
 
 /* Styles de l'en-tête de la page */
@@ -36,9 +39,11 @@ body {
 
 /* Styles pour la disposition en ligne flexible (flexbox) */
 .row {
-  display: -ms-flexbox; /* IE10 */
+  display: -ms-flexbox;
+  /* IE10 */
   display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
+  -ms-flex-wrap: wrap;
+  /* IE10 */
   flex-wrap: wrap;
   padding: 0 20px;
   align-items: center;
@@ -47,7 +52,8 @@ body {
 
 /* Création de quatre colonnes égales côte à côte */
 .column {
-  -ms-flex: 25%; /* IE10 */
+  -ms-flex: 25%;
+  /* IE10 */
   flex: 25%;
   max-width: 25%;
   padding: 0 4px;

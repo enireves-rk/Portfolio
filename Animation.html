@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS_Animation.css">
+    <link rel="stylesheet" href="CSS/CSS_Animation.css">
     <title>Video and GIFs on Scroll</title>
-    <style>
-     </style>
+    <script src="Scripts/Animation_Script.js" defer></script>
 </head>
+
 <body>
     <!-- Inclusion de la bibliothèque Font Awesome pour les icônes -->
     <script src="https://kit.fontawesome.com/b6771f81c5.js" crossorigin="anonymous"></script>
@@ -19,9 +20,9 @@
 
     <!-- Conteneur vidéo -->
     <div id="video-container">
-        <video controls>
+        <video id="myVideo" controls>
             <!-- Source vidéo -->
-            <source src="Images/Images animations/BA Horreur.mp4" type="video/mp4">
+            <source src="Images/Images_animations/BA_Horreur.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -29,9 +30,10 @@
     <!-- Conteneur de GIFs -->
     <div class="gif-container">
         <!-- GIF 1 avec l'ID "ange" -->
-        <img class="gif" src="Images/Images animations/Ange.gif" alt="GIF 1" id="ange">
+        <img class="gif" src="Images/Images_animations/Ange.gif" alt="GIF 1" id="ange">
         <!-- GIF 2 avec l'ID "yangpa" -->
-        <img class="gif" src="Images/Images animations/Yangpa.GIF" alt="GIF 2" id="yangpa">
+        <img class="gif" src="Images/Images_animations/Yangpa.GIF" alt="GIF 2" id="yangpa">
     </div>
 </body>
+
 </html>

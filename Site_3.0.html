@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel=" stylesheet" href="CSS/CSS_3.0.css">
+  <title> Portfolio SK</title>
+  <script src="Scripts/script.js" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<!--Barre de navigation principale-->
+
+<body>
+  <div class="navbar">
+    <a href="#home"> Accueil</a>
+    <a href="#about"> À propos</a>
+    <a href="#portfolio"> Portfolio</a>
+    <a href="#contact"> Contact</a>
+  </div>
+
+  <!--Barre de navigation mobile-->
+  <div class="navbar-hamburger">
+    <div class="navbar-container container">
+      <input type="checkbox">
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+      <ul class="menu-items">
+        <li><a href="#home"> Accueil</a></li>
+        <li><a href="#about"> À propos</a></li>
+        <li><a href="#portfolio"> Portfolio</a></li>
+        <li><a href="#contact"> Contact</a></li>
+      </ul>
+
+    </div>
+  </div>
+
+  <!--Section Accueil-->
+  <section id="home">
+    <div class="contenthome">
+      <div class="home-col-1">
+        Séverine KHUN
+      </div>
+      <div class="home-col-2">
+        <img src="Images/Fond_site/bunny.png" id="bunny" alt="bunny">
+      </div>
+    </div>
+  </section>
+
+  <!--Section à propos-->
+  <section id="about">
+
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="Images/Fond_site/Moi.PNG" id="moi" alt="moi">
+        </div>
+        <!--Sous-titre "à propos"-->
+        <div class="about-col-2">
+          <h1 class="sub-title">À propos</h1>
+          <p> </p>
+          <!--Catégories de la section "à propos"-->
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('education')">Études et Formations</p>
+            <p class="tab-links" onclick="opentab('experience')">Expériences professionnelles</p>
+            <p class="tab-links" onclick="opentab('skills')">Compétences</p>
+          </div>
+          <!--Section "éducation"-->
+          <div class="tab-contents active-tab" id="education">
+            <ul>
+              <li>
+                <span>Programme Grande École (M2) Majeure MEDIA </span><br><br>Institut Mines-Télécom Business School,
+                Évry
+                (91) | 2020 - 2024 | marketing ;
+                management de projet media
+              </li>
+              <li>
+                <span>Échange International</span><br><br>Luleå Tekniska Universitet, Suède - Luleå | Août - Décembre
+                2022|
+                global brand
+                management ; strategies for e-business
+              </li>
+              <li>
+                <span>DUT Techniques de Commercialisation</span><br><br>IUT de Sceaux (92) | Université Paris Saclay |
+                Option Commerce International et
+                mathématiques | 2018 - 2020 | marketing ; comptabilité ; management
+              </li>
+            </ul>
+          </div>
+          <!--Section "expériences"-->
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li>
+                <span>Responsable Son et Décors | MACS Production</span><br><br> Septembre 2023 - Aujourd'hui<br>
+              </li>
+              <li>
+                <span>Communication and Events Associate | BioLabs (75)</span><br><br> Mars 2023 - Septembre 2023 (7
+                mois) |
+                Stage en entreprise <br>
+              </li>
+              <li>
+                <span>Chargée du développement marketing | Sennelier (75)</span><br><br>Juin 2021 - Juillet 2021 (6
+                semaines) | Stage en entreprise <br>
+              </li>
+            </ul>
+          </div>
+          <!--Section "compétences"-->
+          <div class="tab-contents" id="skills">
+            <ul>
+              <li>
+                <span>Informatique</span>
+              </li>
+              <li>
+                <img src="Images/Images_Infos/Adobe_Photoshop_CC_icon.svg.png" id="photoshop" alt="photoshop">
+                <img src="Images/Images_Infos/Adobe_Illustrator_CC_icon.svg.png" id="illustrator" alt="illustrator">
+                <img src="Images/Images_Infos/Adobe_Premiere_Pro_CC_icon.svg.png" id="premiere"
+                  alt="adobe premiere pro">
+                <img src="Images/Images_Infos/Adobe_After_Effects_CC_icon.svg.png" id="after" alt="after effect">
+                <img src="Images/Images_Infos/Procreate-icon.png" id="procreate" alt="procreate">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!--Section portfolio-->
+  <section id="portfolio">
+    <h1>Portfolio</h1>
+    <div class="wrapper">
+      <i id="left" class="fa-solid fa-angle-left"></i>
+      <div class="carousel">
+        <a class="image-container" href="Galerie.html?category=Numerique&numImages=5"> <img
+            src="Images/Couverture_portfolio/numérique.png" alt="img" draggable="false">
+          <div class="image-title">Dessins numériques</div>
+        </a>
+        <a class="image-container" href="Animation.html"> <img src="Images/Couverture_portfolio/animation.PNG" alt="img"
+            draggable="false">
+          <div class="image-title">Animation et vidéo</div>
+        </a>
+        <a class="image-container" href="Galerie.html?category=Dessins_tradi&numImages=6"><img
+            src="Images/Couverture_portfolio/tradi.png" alt="img" draggable="false">
+          <div class="image-title">Dessins traditionnels</div>
+        </a>
+        <a class="image-container" href="Galerie.html?category=Aquarelles&numImages=5"><img
+            src="Images/Couverture_portfolio/aquarelle.png" alt="img" draggable="false">
+          <div class="image-title">Aquarelles</div>
+        </a>
+        <a class="image-container" href="Galerie.html?category=Loup_Garou&numImages=5"> <img
+            src="Images/Couverture_portfolio/loup_garou.PNG" alt="img" draggable="false">
+          <div class="image-title"> Cartes loup garou</div>
+        </a>
+      </div>
+      <i id="right" class="fa-solid fa-angle-right"></i>
+    </div>
+  </section>
+
+  <!--Section contact-->
+  <section id="contact">
+    <h1>Contact</h1>
+
+    <div class="contact-col-2">
+      <ul>
+        <li>
+          <p><i class="fa-solid fa-envelope fa-xl"></i><a
+              href="mailto:severine.khun@imt-bs.eu">severine.khun@imt-bs.eu</a></p>
+          <p><i class="fa-solid fa-phone fa-xl"></i><a href="tel:+33652917049">06.52.91.70.49</a></p>
+          <p>
+            <i class="fa-brands fa-linkedin fa-xl"></i><a href="https://www.linkedin.com/in/s%C3%A9verine-khun/"
+              target="_blank" rel="noopener noreferrer">
+
+              Séverine Khun
+            </a>
+          </p>
+        </li>
+
+      </ul>
+    </div>
+    <!--Ajout de la bande sonore-->
+    <audio controls id="audio">
+      <source src="Musique/Kidnap_Kid-Moments(feat.Leo_Stannard).mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+
+  <!--importation du script FontAwesome-->
+  <script src="https://kit.fontawesome.com/b6771f81c5.js" crossorigin="anonymous"></script>
+</body>

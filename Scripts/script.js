@@ -100,3 +100,13 @@ carousel.addEventListener("touchmove", dragging);
 
 document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("touchend", dragStop);
+
+//audio volume
+var audio = document.getElementById("audio");
+audio.volume = 0.3; // Set the volume to 30%
+
+
+
+
+
+
