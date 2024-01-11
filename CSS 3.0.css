@@ -1,9 +1,10 @@
+/*Police d'écriture de l'ensemble du site*/
 body{
-  font-family:Georgia, serif
-}
+  font-family:Georgia, serif}
 
  /*------------------barre de navigation------------------*/
  .navbar {
+   /*Disposition de la navbar et choix de couleur (centrer avec des espacements réugliers entre les textes)*/
    display: flex;
    justify-content: space-around;
    align-items: center;
@@ -13,15 +14,16 @@ body{
    width: 50%;
    height: 40px;
    /*rajout de ça sinon la barre était trop fine*/
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-   border-radius: 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /*navbar avec un fond semi-transparent*/
+   border-radius: 10px;  /*bords de la navbar arrondie*/
    transition: top 0.3s;
    left: 50%;
    transform: translateX(-50%);
    z-index: 1000;
  }
 
- .navbar a {
+ .navbar a { 
+  /*Couleur de texte dans la navbar*/
    color: rgb(182, 234, 200);
    text-align: center;
    padding: 14px 16px;
@@ -30,42 +32,45 @@ body{
  }
 
  .navbar a:hover {
-   /*Lorsque je survole un lien*/
+   /*Lorsque je survole un lien, changement de couleur*/
    background-color: #dddddde3;
    color: black;
    border-radius: 10px;
  }
 
  html {
-   scroll-behavior: smooth;
+   scroll-behavior: smooth; /*défilement fluide de la page*/
  }
 
- section {
+ section { 
+  /*style générique pour l'ensemble des sections*/
    height: 100vh;
-   /* Set the height of each section as the viewport height */
+   /* 100% de la hauteur de la fenêtre visible */
 
-   background-repeat: no-repeat;
+   background-repeat: no-repeat;  /*Fond du site centrer, qui ne se répète pas*/
    background-position: center center;
    background-size: cover;
    background-blend-mode: screen;
 
-   background-attachment: scroll;
+   background-attachment: scroll; 
  }
 
  .contenthome {
+  /*style pour le contenu de la page d'accueil*/
    color: white;
    display: flex;
    justify-content: center;
    font-size: 80px;
    color: rgb(170, 233, 223);
-   text-align: center; /* Center the text horizontally */
+   text-align: center; /* Centre le texte horizontalement */
  }
 
 
  /*------------------home------------------*/
 
  #home {
-  background-image: url(Images/Fond\ site/home.png);
+  /*style spécifique à la page d'accueil comprenant une image de fond et du contenu centré verticalemet et horizontalement*/ 
+  background-image: url(Images/Fond\ site/home.png);/*image de fond*/
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -82,33 +87,37 @@ body{
 
 
 .home-col-1 {
+  /*colonne n°1 = texte, disposition du texte et couleur*/
   display: flex;
   align-items: center;
-  font-size: 100px;
+  font-size: 80px;
   color: rgb(170, 233, 223);
   text-align: center; /* Center the text horizontally */
 }
 
 .home-col-2 {
+/*colonne n°2 = image, disposition*/
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #bunny {
- width: 350px;
+  /*taille de l'image*/
+ width: 220px;
  margin-left: 180px;
 }
 
  /*------------------about------------------*/
  #about {
-  background-image: url(Images/Fond\ site/about.jpg);
+  /*style spécifique à la section à propos, couleur et position*/
+  background-image: url(Images/Fond\ site/about.jpg);/*image de fond*/
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   overflow: auto;
   margin: 0;
- /* padding: 80px 0;*/
+  padding: 80px 0;
   color: white;
   height: 100vh;
   display: flex;
@@ -117,40 +126,36 @@ body{
 
 }
 
-h1 {
+h1 { /*titre de la section "à propos"*/
   color: rgb(182, 234, 200);
   font-size: 50px;
   margin-left: 40px;
 }
-.about-col-2 h1
-{
- margin-left: 0;
-}
-.row {
+
+.row { /*mise en page des colonnes*/
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 10px;
   height: 580px; /* Set your desired fixed height */
   overflow: hidden; /* Hide overflowing content */
-  text-align: center;
 }
 
-.about-col-1 img {
+.about-col-1 img { /*mise en page de la 1e colonne qui est l'image*/
   max-height: 100%; /* Allow the image to take the full height of the row */
     width: 100%; /* Maintain the aspect ratio of the image */
   display: block;
   margin: auto;
 }
 
-.about-col-1 {
+.about-col-1 { /*mise en page de la colonne 1*/
   flex: 1;
   display: flex;
   justify-content: center; /* Center the content horizontally */
   align-items: center;
 }
 
-.about-col-2 {
+.about-col-2 { /*mise en page de la colonne 2*/
   flex: 2;
   margin-right: 10%;
   overflow-y: auto; /* Add a scrollbar if content overflows vertically */
@@ -159,13 +164,13 @@ h1 {
 
 
 
- .tab-titles {
+ .tab-titles { /*mise en page des onglets de la section à propos*/
    display: flex;
    margin: 10px 0 20px;
    justify-content: space-evenly;
  }
 
- .tab-links {
+ .tab-links { /*style pour les onglets*/ 
    margin-right: 50px;
    font-size: 18px;
    font-weight: 500;
@@ -173,7 +178,7 @@ h1 {
    position: relative;
  }
 
- .tab-links::after {
+ .tab-links::after {/*ligne qui apparait sous les onglets lorsqu'on survole l'onglet*/
     content: '';
    width: 0;
    height: 3px;
@@ -184,7 +189,7 @@ h1 {
    transition: 0.5s;
  }
 
- .tab-links.active-link::after {
+ .tab-links.active-link::after { /*ligne qui reste active une fois l'onglet sélectionné*/
    width: 50%;
  }
 
@@ -193,29 +198,25 @@ h1 {
    margin: 10px 0;
  
  }
- .tab-contents ul  {
 
-  padding-inline-start: 0;
-}
-
- .tab-contents ul li span {
+ .tab-contents ul li span {/*style des sous titres en vert et gras*/
    color: rgb(182, 234, 200);
    font-size: 16px;
    font-weight: bold;
  }
 
- .tab-contents {
+ .tab-contents {/*style du conteneur*/
   background: rgba(51, 51, 51, 0.5);;
    display: none;
    border-radius: 1%;
    padding: 10px;
  }
 
- .tab-contents.active-tab {
+ .tab-contents.active-tab {/*affichage du contenu*/
    display: block;
  }
 
- #photoshop {
+ #photoshop {/*taille des images dans la partie compétences*/
    width: 25px;
  }
 
@@ -237,8 +238,8 @@ h1 {
 
 
  /*------------------portfolio------------------*/
- #portfolio {
-   background-image: url(Images/Fond\ site/portfolio.jpg);
+ #portfolio {/*mise en page de l'image de fond*/
+   background-image: url(Images/Fond\ site/portfolio.jpg);/*image de fond*/
    background-repeat: no-repeat;
    background-position: center;
    overflow: auto;
@@ -248,10 +249,10 @@ h1 {
    height: 100vh;
    /* Utilise la hauteur de la fenêtre pour les sections */
  }
- #portfolio h1 {
+ #portfolio h1 {/*style de la section portfolio*/
   position: relative;
-  z-index: 1;
-  top: 10%; 
+  z-index: 1;/*élément doit appraitre au-dessus des éléments avec un z-index plus bas*/
+  top: 23%; 
 }
  body
    {
@@ -266,7 +267,7 @@ h1 {
   display: flex;
   max-width: 1200px;
   position: relative;
-  top: 35%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -329,14 +330,14 @@ h1 {
   margin-left: 14px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {/*adaptation du caroussel aux écrans de 900px*/
   .carousel img{
     width: calc(100% / 2);
     
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 550px) {/*adaptation du caroussel aux écrans de 550px*/
   .carousel img{
     width: 90%;
     margin-left:0px ;
@@ -345,14 +346,14 @@ h1 {
       margin-left:0px ;
     }
 }
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 700px) {/*adaptation du caroussel aux écrans de 700px*/
   .carousel img{
     height: 240px;
     
   }
 }
 
-@media screen and (max-height: 550px) {
+@media screen and (max-height: 550px) {/*adaptation du caroussel aux écrans de 550px*/
   .carousel img{
     height: 140px;
   }
@@ -437,7 +438,7 @@ align-items :center;
   }
 
   .home-col-1 {
-    font-size: 70px; 
+    font-size: 50px; 
     margin: 20px;
   }
 
@@ -447,13 +448,13 @@ align-items :center;
   }
 
   #bunny {
-    width: 200px; 
+    width: 150px; 
     margin-left: 0; 
   }
 
   #about {
    
-    padding: 0 20px; 
+    padding: 40px 20px; 
     text-align: center; 
   }
 
@@ -532,7 +533,7 @@ align-items :center;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translate(-70%, -50%);
+  transform: translate(-63%, -50%);
 }
   .carousel {
     text-align: center;
@@ -588,6 +589,12 @@ align-items :center;
 
 /* ///////////..utility classes../////////// */
 
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
 
 
 
@@ -628,9 +635,6 @@ align-items :center;
     display: block;
     position: relative;
     height: 64px;
-    max-width: 1200px;
-    width: 90%;
-    margin: auto;
   }
 
   .navbar-container input[type="checkbox"] {
@@ -691,7 +695,7 @@ align-items :center;
     padding-left: 50px;
     transition: transform 0.5s ease-in-out;
     text-decoration: none; 
-   margin-top: 0;
+   
   }
 
 

@@ -1,85 +1,97 @@
-var tablinks= document.getElementsByClassName("tab-links");
-  var tabcontents= document.getElementsByClassName("tab-contents");
-  function opentab(tabname)
-  {
-    for(tablink of tablinks)
-    {
-      tablink.classList.remove("active-link")
-    }
-    for(tabcontent of tabcontents)
-    {
-      tabcontent.classList.remove("active-tab")
-    }
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
+// Sélection des éléments avec les classes "tab-links" et "tab-contents"
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+// Fonction pour ouvrir un onglet spécifié
+function opentab(tabname) {
+  // Suppression de la classe "active-link" de tous les éléments avec la classe "tab-links"
+  for (tablink of tablinks) {
+    tablink.classList.remove("active-link");
   }
 
+  // Suppression de la classe "active-tab" de tous les éléments avec la classe "tab-contents"
+  for (tabcontent of tabcontents) {
+    tabcontent.classList.remove("active-tab");
+  }
 
-const carousel = document.querySelector(".carousel"),
-firstImg = carousel.querySelectorAll("img")[0],
-arrowIcons = document.querySelectorAll(".wrapper i");
+  // Ajout de la classe "active-link" à l'élément actuel (cible de l'événement)
+  event.currentTarget.classList.add("active-link");
 
-let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
-
-const showHideIcons = () => {
-    // showing and hiding prev/next icon according to carousel scroll left value
-    let scrollWidth = carousel.scrollWidth - carousel.clientWidth; // getting max scrollable width
-    arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
-    arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
+  // Ajout de la classe "active-tab" à l'élément avec l'ID correspondant au nom de l'onglet
+  document.getElementById(tabname).classList.add("active-tab");
 }
 
-arrowIcons.forEach(icon => {
-    icon.addEventListener("click", () => {
-        let firstImgWidth = firstImg.clientWidth + 14; // getting first img width & adding 14 margin value
-        // if clicked icon is left, reduce width value from the carousel scroll left else add to it
-        carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
-        setTimeout(() => showHideIcons(), 60); // calling showHideIcons after 60ms
-    });
+// Sélection des éléments nécessaires pour le carrousel
+const carousel = document.querySelector(".carousel"),
+  firstImg = carousel.querySelectorAll("img")[0],
+  arrowIcons = document.querySelectorAll(".wrapper i");
+
+let isDragStart = false,
+  isDragging = false,
+  prevPageX,
+  prevScrollLeft,
+  positionDiff;
+
+// Fonction pour afficher/masquer les icônes de navigation en fonction de la position du carrousel
+const showHideIcons = () => {
+  let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+  arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
+  arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
+};
+
+// Gestion des clics sur les icônes de navigation (gauche/droite)
+arrowIcons.forEach((icon) => {
+  icon.addEventListener("click", () => {
+    let firstImgWidth = firstImg.clientWidth + 14;
+    carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
+    setTimeout(() => showHideIcons(), 60);
+  });
 });
 
+// Fonction pour effectuer un défilement automatique après un certain temps
 const autoSlide = () => {
-    // if there is no image left to scroll then return from here
-    if(carousel.scrollLeft - (carousel.scrollWidth - carousel.clientWidth) > -1 || carousel.scrollLeft <= 0) return;
+  if (carousel.scrollLeft - (carousel.scrollWidth - carousel.clientWidth) > -1 || carousel.scrollLeft <= 0) return;
 
-    positionDiff = Math.abs(positionDiff); // making positionDiff value to positive
-    let firstImgWidth = firstImg.clientWidth + 14;
-    // getting difference value that needs to add or reduce from carousel left to take middle img center
-    let valDifference = firstImgWidth - positionDiff;
+  positionDiff = Math.abs(positionDiff);
+  let firstImgWidth = firstImg.clientWidth + 14;
+  let valDifference = firstImgWidth - positionDiff;
 
-    if(carousel.scrollLeft > prevScrollLeft) { // if user is scrolling to the right
-        return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
-    }
-    // if user is scrolling to the left
-    carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
-}
+  if (carousel.scrollLeft > prevScrollLeft) {
+    return (carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff);
+  }
 
+  carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+};
+
+// Gestion du début du glissement (souris enfoncée/touche tactile)
 const dragStart = (e) => {
-    // updatating global variables value on mouse down event
-    isDragStart = true;
-    prevPageX = e.pageX || e.touches[0].pageX;
-    prevScrollLeft = carousel.scrollLeft;
-}
+  isDragStart = true;
+  prevPageX = e.pageX || e.touches[0].pageX;
+  prevScrollLeft = carousel.scrollLeft;
+};
 
+// Gestion du glissement (souris déplacée/touche tactile déplacée)
 const dragging = (e) => {
-    // scrolling images/carousel to left according to mouse pointer
-    if(!isDragStart) return;
-    e.preventDefault();
-    isDragging = true;
-    carousel.classList.add("dragging");
-    positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
-    carousel.scrollLeft = prevScrollLeft - positionDiff;
-    showHideIcons();
-}
+  if (!isDragStart) return;
+  e.preventDefault();
+  isDragging = true;
+  carousel.classList.add("dragging");
+  positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+  carousel.scrollLeft = prevScrollLeft - positionDiff;
+  showHideIcons();
+};
 
+// Gestion de la fin du glissement (souris relâchée/touche tactile levée)
 const dragStop = () => {
-    isDragStart = false;
-    carousel.classList.remove("dragging");
+  isDragStart = false;
+  carousel.classList.remove("dragging");
 
-    if(!isDragging) return;
-    isDragging = false;
-    autoSlide();
-}
+  if (!isDragging) return;
+  isDragging = false;
+  autoSlide();
+};
 
+// Écouteurs d'événements pour la gestion du glissement sur le carrousel
 carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("touchstart", dragStart);
 

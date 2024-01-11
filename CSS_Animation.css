@@ -1,3 +1,4 @@
+/* Styles généraux du corps de la page */
 body {
     margin: 0;
     background-image: url(Images/Fond\ site/fond.png);
@@ -5,17 +6,17 @@ body {
     overflow: auto;
     margin: 0;
     padding: 0;
-    position:relative;
- 
+    position: relative;
 }
 
-#return
-{
-  z-index: 1;
- position: relative;
- padding: 20px;
-
+/* Styles du bouton de retour */
+#return {
+    z-index: 1;
+    position: relative;
+    padding: 20px;
 }
+
+/* Styles du conteneur vidéo */
 #video-container {
     display: flex;
     justify-content: center;
@@ -24,6 +25,7 @@ body {
     margin: 0;
 }
 
+/* Styles de la vidéo */
 video {
     width: 80%;
     max-width: 800px;
@@ -31,40 +33,37 @@ video {
     border-radius: 8px;
 }
 
+/* Styles du conteneur de GIFs */
 .gif-container {
     text-align: center;
     margin-top: auto;
     margin-bottom: 30px;
 }
 
-#ange{
-    width: 30%
+/* Styles spécifiques pour l'élément avec l'ID "ange" */
+#ange {
+    width: 30%;
 }
 
-#yangpa{
-    width:30%;
+/* Styles spécifiques pour l'élément avec l'ID "yangpa" */
+#yangpa {
+    width: 30%;
 }
 
-  
-/* Mobile styles */
-@media screen and (max-width: 768px) 
-{
+/* Styles pour les dispositifs mobiles avec une largeur d'écran maximale de 768px */
+@media screen and (max-width: 768px) {
     #video-container {
         height: 260px;
         margin-top: 30px;
     }
     .gif-container {
-        
         margin-bottom: 0;
         height: 50vh;
     }
-    
-    #ange{
-        width: 55%
+    #ange {
+        width: 55%;
     }
-    
-    #yangpa{
-        width:55%;
+    #yangpa {
+        width: 55%;
     }
-    
 }

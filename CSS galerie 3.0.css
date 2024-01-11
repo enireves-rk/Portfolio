@@ -1,35 +1,40 @@
+/* Réinitialisation des marges, ajout d'une image de fond et positionnement */
 body {
   margin: 0;
   background-image: url(Images/Fond\ site/fond.png);
   background-position: center;
   overflow: auto;
-  margin: 0;
+  margin: 0; /* Cette instruction est redondante et pourrait être omise */
   padding: 0;
-  position:relative
+  position: relative; /* Position relative pour les éléments enfants positionnés absolument */
 }
 
+/* Boîte englobante pour tous les éléments avec la boîte de modèle border-box */
 * {
   box-sizing: border-box;
 }
 
+/* Styles généraux du corps de la page */
 body {
   margin: 0;
   font-family: Arial;
-  margin-bottom: 40px;
+  margin-bottom: 40px; /* Espace en bas pour éviter que le contenu ne soit caché sous les éléments fixes en bas de la page */
 }
 
+/* Styles de l'en-tête de la page */
 .header {
   text-align: center;
   padding: 32px;
 }
-#return
-{
-  z-index: 1;
- position: relative;
- padding: 20px;
 
+/* Styles du bouton de retour */
+#return {
+  z-index: 1;
+  position: relative;
+  padding: 20px;
 }
 
+/* Styles pour la disposition en ligne flexible (flexbox) */
 .row {
   display: -ms-flexbox; /* IE10 */
   display: flex;
@@ -40,7 +45,7 @@ body {
   justify-content: center;
 }
 
-/* Create four equal columns that sits next to each other */
+/* Création de quatre colonnes égales côte à côte */
 .column {
   -ms-flex: 25%; /* IE10 */
   flex: 25%;
@@ -48,13 +53,14 @@ body {
   padding: 0 4px;
 }
 
+/* Styles pour les images à l'intérieur des colonnes */
 .column img {
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
+/* Mise en page réactive - deux colonnes au lieu de quatre pour une largeur d'écran maximale de 800px */
 @media screen and (max-width: 800px) {
   .column {
     -ms-flex: 50%;
@@ -63,7 +69,7 @@ body {
   }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/* Mise en page réactive - les deux colonnes passent l'une au-dessus de l'autre pour une largeur d'écran maximale de 600px */
 @media screen and (max-width: 600px) {
   .column {
     -ms-flex: 100%;
@@ -71,4 +77,3 @@ body {
     max-width: 100%;
   }
 }
-

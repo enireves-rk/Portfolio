@@ -6,25 +6,32 @@
     <link rel="stylesheet" href="CSS_Animation.css">
     <title>Video and GIFs on Scroll</title>
     <style>
-      
-    </style>
+     </style>
 </head>
 <body>
+    <!-- Inclusion de la bibliothèque Font Awesome pour les icônes -->
     <script src="https://kit.fontawesome.com/b6771f81c5.js" crossorigin="anonymous"></script>
+
+    <!-- Bouton de retour avec une icône de flèche -->
     <a href="#" onclick="history.go(-1);" class="return-button">
         <i id="return" class="fa-solid fa-angle-left fa-2xl" style="color: #B6EAC8;"></i>
     </a>
+
+    <!-- Conteneur vidéo -->
     <div id="video-container">
         <video controls>
+            <!-- Source vidéo -->
             <source src="Images/Images animations/BA Horreur.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
 
+    <!-- Conteneur de GIFs -->
     <div class="gif-container">
+        <!-- GIF 1 avec l'ID "ange" -->
         <img class="gif" src="Images/Images animations/Ange.gif" alt="GIF 1" id="ange">
+        <!-- GIF 2 avec l'ID "yangpa" -->
         <img class="gif" src="Images/Images animations/Yangpa.GIF" alt="GIF 2" id="yangpa">
     </div>
-
 </body>
 </html>

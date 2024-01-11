@@ -6,88 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS galerie 3.0.css">
     <link rel="htmlsheet" href="Site 3.0.html">
-    <title>La génie</title>
+    <title>Galerie</title>
     </head>
     <body>
         
    
-        <script src="https://kit.fontawesome.com/b6771f81c5.js" crossorigin="anonymous"></script>
+         <!-- Intégration de la bibliothèque d'icônes -->
+    <script src="https://kit.fontawesome.com/b6771f81c5.js" crossorigin="anonymous"></script>
 
+    <!-- Bouton de retour -->
     <a href="#" onclick="history.go(-1);" class="return-button">
         <i id="return" class="fa-solid fa-angle-left fa-2xl" style="color: #B6EAC8;"></i>
     </a>
 
-     <!--   <script>
-            // Function to change the image and title
-            changeTitle('Title 1');
-            function changeTitle(title) {
-                // Update the title
-                document.getElementById('imageTitle').innerText = title;
-    
-            }
-        </script>
-       -->
+    <!-- Conteneur pour les images -->
+    <div class="row"  id="images-container"></div>
 
-    
-    
+    <!-- Script pour changer la catégorie d'images -->
+    <script>
+        function changeCategory(category, numImages) {
+            var imagesContainer = document.getElementById('images-container');
 
+            // Vérifie si l'élément existe
+            if (imagesContainer) {
+                // Efface les images existantes
+                imagesContainer.innerHTML = '';
 
-        <div class="row"  id="images-container">
-           
-  
-         
-          </div>
-      
-          <script>
-            function changeCategory(category,numImages) {
-                var imagesContainer = document.getElementById('images-container');
-        
-                // Check if the element exists
-                if (imagesContainer) {
-                    // Clear existing images
-                    imagesContainer.innerHTML = '';
-        
-                    // Define the number of columns and images per column
-                    var columns = 2;
-                    var imagesPerColumn = [2, 3];
-                    if(numImages==6){
-                     imagesPerColumn = [3, 3];
-                    }
-                   
-                    var totalImages = imagesPerColumn.reduce((a, b) => a + b, 0); // Total number of images
-        
-                    for (var i = 0; i < columns; i++) {
-                        var column = document.createElement('div');
-                        column.className = 'column';
-        
-                        // Calculate the starting index for the current column
-                        var startIndex = Math.floor(i * totalImages / columns); 
-        
-                        for (var j = 1; j <= imagesPerColumn[i]; j++) {
-                            var img = document.createElement('img');
-                            img.src = 'Images/' + category + '/' + (startIndex + j) + '.jpg';
-                            column.appendChild(img);
-                            console.log('image '+ j);
-                        }
-        
-                        imagesContainer.appendChild(column);
-                    }
-                } else {
-                    console.error("Element with id 'images-container' not found.");
+                // Définit le nombre de colonnes et d'images par colonne
+                var columns = 2;
+                var imagesPerColumn = [2, 3];
+                if (numImages == 6) {
+                    imagesPerColumn = [3, 3];
                 }
-            }
-        
-            var urlParams = new URLSearchParams(window.location.search);
-            var category = urlParams.get('category');
-            var numImages = urlParams.get('numImages');
-            console.log(numImages)
-            if (category) {
-                changeCategory(category,numImages);
-            }
-        </script>
-        
 
-    </body>
+                var totalImages = imagesPerColumn.reduce((a, b) => a + b, 0); // Nombre total d'images
+
+                for (var i = 0; i < columns; i++) {
+                    var column = document.createElement('div');
+                    column.className = 'column';
+
+                    // Calcule l'index de départ pour la colonne actuelle
+                    var startIndex = Math.floor(i * totalImages / columns);
+
+                    for (var j = 1; j <= imagesPerColumn[i]; j++) {
+                        var img = document.createElement('img');
+                        img.src = 'Images/' + category + '/' + (startIndex + j) + '.jpg';
+                        column.appendChild(img);
+                        console.log('image ' + j);
+                    }
+
+                    imagesContainer.appendChild(column);
+                }
+            } else {
+                console.error("Element with id 'images-container' not found.");
+            }
+        }
+
+        // Récupère les paramètres d'URL pour la catégorie et le nombre d'images
+        var urlParams = new URLSearchParams(window.location.search);
+        var category = urlParams.get('category');
+        var numImages = urlParams.get('numImages');
+        console.log(numImages)
+        
+        // Si une catégorie est spécifiée, change la catégorie d'images
+        if (category) {
+            changeCategory(category, numImages);
+        }
+    </script>
+</body>
+
 </html>
-        
-        
